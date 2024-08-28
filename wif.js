@@ -1,9 +1,9 @@
 const bitcoin = require('bitcoinjs-lib');
 const bs58check = require('bs58check');
 
-// Função para converter chave hexadecimal para WIF
+// FunÃ§Ã£o para converter chave hexadecimal para WIF
 function hexToWIF(hexKey) {
-  // Adiciona o prefixo 0x80 (128 em decimal) no início da chave hexadecimal
+  // Adiciona o prefixo 0x80 (128 em decimal) no inÃ­cio da chave hexadecimal
   const prefix = Buffer.from('80', 'hex');
   const keyBuffer = Buffer.concat([prefix, Buffer.from(hexKey, 'hex')]);
 
@@ -17,7 +17,7 @@ function hexToWIF(hexKey) {
 }
 
 // Exemplo de uso
-const hexKey = '000000000000000000000000000000000000000000000000f7051f27b09112d4'; // Substitua pela sua chave hexadecimal
+const hexKey = 'f9e01894d011d7120a0742adcdcb31378f481a7e046a040e0ede6f0ce5643931'; // Substitua pela sua chave hexadecimal
 const wifKey = hexToWIF(hexKey);
 
 console.log('Chave WIF:', wifKey);
